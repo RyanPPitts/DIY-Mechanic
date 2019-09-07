@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 // BP allow us to take requests and get data from the body.
 
 
+const items = require('./routes/api/items');
+
 const app = express();
 
 // Bodyparser Middleware
@@ -20,6 +22,9 @@ mongoose
 .connect(db)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
+
+// use routes
+app.use('/api/items', items)
 
 // Port to run server.  Process.env.port is to run on heroku
 const port = process.env.PORT || 5000;
