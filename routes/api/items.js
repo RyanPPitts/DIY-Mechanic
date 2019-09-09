@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 
 // @route POST api/items
 // @description Create a POST
-// @access Public
+// @access Private
 
 router.post('/', auth, (req, res) => {
    const newItem = new Item({
