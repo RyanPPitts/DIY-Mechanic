@@ -16,7 +16,9 @@ import PropTypes from 'prop-types';
 class ItemModal extends Component {
   state = {
     modal: false,
-    name: ''
+    name: '',
+    date: '',
+    cost: ''
   };
 
   static propTypes = {
@@ -56,7 +58,7 @@ class ItemModal extends Component {
             style={{ marginBottom: '2rem' }}
             onClick={this.toggle}
           >
-            Add Item
+            Add Service
           </Button>
         ) : (
           <h4 className='mb-3 ml-4'>Please log in to manage services</h4>
@@ -75,9 +77,31 @@ class ItemModal extends Component {
                   placeholder='Add service'
                   onChange={this.onChange}
                 />
+
+                <Label for='item'>Due Date</Label>
+                <Input
+                  type='date'
+                  name='date'
+                  id='item'
+                  placeholder='Add service date'
+                  onChange={this.onChange}
+                />
+
+                <Label for='item'>Cost</Label>
+                <Input
+                  type='text'
+                  name='cost'
+                  id='item'
+                  placeholder='Add service cost'
+                  onChange={this.onChange}
+                />
+
+                
                 <Button color='dark' style={{ marginTop: '2rem' }} block>
-                  Add Item
+                  Add Service
                 </Button>
+
+
               </FormGroup>
             </Form>
           </ModalBody>
