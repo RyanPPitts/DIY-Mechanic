@@ -8,16 +8,16 @@ const ItemSchema = new Schema ({
         required: true
     },
     description: {
-        type: String,
-        required: true
+        type: String, 
+        default: true
     },
     cost: {
-        type: Number,
-        required: true
+        type: Number, 
+        default: true
     },
     due_date: {
-        type: Date,
-        require: true
+        type: Date, 
+        default: true
     },
     date: {
         type: Date, 

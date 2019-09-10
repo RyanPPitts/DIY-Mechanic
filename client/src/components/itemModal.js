@@ -20,7 +20,8 @@ class ItemModal extends Component {
   state = {
     modal: false,
     name: '',
-    date: '',
+    description: '',
+    due_date: '',
     cost: ''
   };
 
