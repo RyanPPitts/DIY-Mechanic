@@ -1,6 +1,6 @@
-# Mern-Shopping-List
-MERN Stack Tutorial from Traversy Media.  12 part series about working with the MERN stack
+MyGarageApp-React-App
+Name : Ryan Pitts
 
-To Start: 
+React Project : General Assembly Software Engineering Immersive Program
 
-Use - NPM run dev - that will run nodemon and react app
+Concept: The MyGarageApp allows a user to 'stay on top' of their auto's maintanence and scheduled check-ins. The app will allow a user to enter multiple vehicles to keep track of their maintanance history and future appointments. Schedule maintainence appointments for later in the future, edit current/past service appointments,etc
