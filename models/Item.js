@@ -16,8 +16,7 @@ const ItemSchema = new Schema ({
         default: true
     },
     due_date: {
-        type: Date, 
-        default: true
+        type: Date,     
     },
     date: {
         type: Date, 
