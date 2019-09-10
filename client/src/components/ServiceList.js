@@ -27,20 +27,32 @@ onDeleteClick = id => {
             <Container>
                     <ListGroup>
                         <TransitionGroup className="service-list">
-                            {items.map(({_id, name}) => (
+                            {items.map(({_id, name, cost, description, due_date}) => (
                                 <CSSTransition key={_id} timeout={500} classNames="fade">
+
+
                                     <ListGroupItem>
+                                        
+                                        
                                         { this.props.isAuthenticated ? 
                                     <Button
                                     className='remove-btn'
                                     color='danger'
                                     size='sm'
                                     onClick={this.onDeleteClick.bind(this, _id)}
-                                    >
+                                    > Delete Service
                                     &times;
                                     </Button> :null}
-                                        {name}
+
+                                    <container>
+                                    <p>Service Name:  {name}</p>
+                                    <p>Service Description : {description}</p>
+                                    <p>Service Due Date: {due_date} </p>
+                                    <p>Service Cost : {cost}</p>
+                                    </container>
+                                        
                                     </ListGroupItem>
+                                    
                                 </CSSTransition>
                             ))}
                         </TransitionGroup>

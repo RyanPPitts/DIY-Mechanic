@@ -14,6 +14,7 @@ import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal';
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout';
+import logo from '../logo.png'
 
 class AppNavbar extends Component {
   state = {
@@ -37,7 +38,7 @@ class AppNavbar extends Component {
       <Fragment>
         <NavItem>
           <span className='navbar-text mr-3'>
-            <strong>{user ? `Welcome ${user.name}` : ''}</strong>
+            <strong>{user ? `Hi ${user.name}` : ''}</strong>
           </span>
         </NavItem>
         <NavItem>
@@ -57,11 +58,13 @@ class AppNavbar extends Component {
       </Fragment>
     );
 
+
     return (
       <div>
         <Navbar color='dark' dark expand='sm' className='mb-5'>
           <Container>
-            <NavbarBrand href='/'>DIY Mechanic</NavbarBrand>
+          
+            <NavbarBrand href='/'><img src={logo} alt="DIYMechanic logo" height='200' /> </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>

@@ -7,6 +7,18 @@ const ItemSchema = new Schema ({
         type: String, 
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
+    cost: {
+        type: Number,
+        required: true
+    },
+    due_date: {
+        type: Date,
+        require: true
+    },
     date: {
         type: Date, 
         default: Date.now

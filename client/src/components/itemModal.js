@@ -7,11 +7,14 @@ import {
   Form,
   FormGroup,
   Label,
-  Input
+  Input,
+  Container
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
+import LandingPage  from '../components/landingPage';
+
 
 class ItemModal extends Component {
   state = {
@@ -39,7 +42,10 @@ class ItemModal extends Component {
     e.preventDefault();
 
     const newItem = {
-      name: this.state.name
+      name: this.state.name,
+      cost: this.state.cost,
+      description: this.state.description,
+      due_date: this.state.due_date
     };
 
     // Add item via addItem action
@@ -52,6 +58,7 @@ class ItemModal extends Component {
   render() {
     return (
       <div>
+        
         {this.props.isAuthenticated ? (
           <Button
             color='dark'
@@ -61,7 +68,11 @@ class ItemModal extends Component {
             Add Service
           </Button>
         ) : (
-          <h4 className='mb-3 ml-4'>Please log in to manage services</h4>
+
+          <Container>
+            <LandingPage/>
+          </Container>
+
         )}
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
@@ -78,14 +89,23 @@ class ItemModal extends Component {
                   onChange={this.onChange}
                 />
 
-                <Label for='item'>Due Date</Label>
+                <Label for='item'>Description of Service</Label>
+                <Input
+                  type='text'
+                  name='description'
+                  id='item'
+                  placeholder='Add description of service'
+                  onChange={this.onChange}
+                />
+
+                 <Label for='item'>Due Date</Label>
                 <Input
                   type='date'
-                  name='date'
+                  name='due_date'
                   id='item'
                   placeholder='Add service date'
                   onChange={this.onChange}
-                />
+                /> 
 
                 <Label for='item'>Cost</Label>
                 <Input
@@ -96,7 +116,6 @@ class ItemModal extends Component {
                   onChange={this.onChange}
                 />
 
-                
                 <Button color='dark' style={{ marginTop: '2rem' }} block>
                   Add Service
                 </Button>
