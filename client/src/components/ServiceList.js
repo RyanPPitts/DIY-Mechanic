@@ -44,6 +44,12 @@ onDeleteClick = id => {
                                     &times;
                                     </Button> :null}
 
+                                    <Button
+                                    className="btn-primary"
+                                    color='info'
+                                    size='sm'
+                                    > Edit Service </Button>
+
                                     <container>
                                     <p>Service Name:  {name}</p>
                                     <p>Service Description : {description}</p>
