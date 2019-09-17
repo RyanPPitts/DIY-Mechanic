@@ -6,10 +6,11 @@ React Project : General Assembly Software Engineering Immersive Program
 Concept: The MyGarageApp allows a user to 'stay on top' of their auto's maintanence and scheduled check-ins. The app will allow a user to enter multiple vehicles to keep track of their maintanance history and future appointments. Schedule maintainence appointments for later in the future, edit current/past service appointments,etc
 
 Languages used:
-React
+React / Redux
 Express
 Node.js
-Mongodb
+Mongodb - cloud based server
+JWT Authorization
 
 The app is connected to the MongoDB cloud server.  Information about items and users are stored in its own cluster.
 
