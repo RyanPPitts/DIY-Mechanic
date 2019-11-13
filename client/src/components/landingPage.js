@@ -14,7 +14,6 @@ class LandingPage extends Component {
               <h1 class=" text-center text-uppercase">Welcome to DIY Mechanic</h1>
               <p class="text-center"> This is v1.0 of the DIY Mechanic React App</p>
               <p class="text-center"> Currently the app features token based login/registration, connection with MongoDB cloud server, simple CRUD operations on the services list</p>
-              <p class="text-center"> The app still needs the following : Styling, Ability to edit service, Ability to add "vehicles" to your garage, cleaner UI, ability to see upcoming services along with reminders</p>
               <p class="text-center"> Currently utilizing all the React skills I have learned </p>
               <h4 class="text-center">Please log in to manage services</h4>
               </main>
